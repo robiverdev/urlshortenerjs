@@ -1,4 +1,5 @@
 const express = require("express")
+const {nanoid} = require("nanoid")
 
 const app = express()
 const PORT = 4000
@@ -10,12 +11,17 @@ app.get("/", (req, res) => {
 // Middleware - parse JSON
 app.use(express.json())
 
+const urls = {}
+
 app.post("/shorten", (req,res) => {
   const {originalUrl} = req.body
   if(!originalUrl) {
     return res.status(400).send("URL is required!")
   }
-  res.send("URL status OK")
+
+  const shortId = nanoid(6)
+  urls[shortId] = originalUrl
+  res.json({shortUrl: `http://localhost:${PORT}/${shortId}`})
 })
 
 app.listen(PORT, () => {
