@@ -4,9 +4,8 @@ const {nanoid} = require("nanoid")
 const app = express()
 const PORT = 4000
 
-app.get("/", (req, res) => {
-  res.send("URL Shortener Homepage")
-})
+// Serves static files (html, js, css)
+app.use(express.static(__dirname))
 
 // Middleware - parse JSON
 app.use(express.json())
