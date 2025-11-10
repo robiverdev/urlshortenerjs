@@ -24,6 +24,15 @@ app.post("/shorten", (req,res) => {
   res.json({shortUrl: `http://localhost:${PORT}/${shortId}`})
 })
 
+app.get("/:id", (req,res) => {
+  const originalUrl = urls[req.params.id]
+  if(originalUrl) {
+    res.redirect(originalUrl)
+  } else {
+    res.status(400).send("URL not found!")
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 })
