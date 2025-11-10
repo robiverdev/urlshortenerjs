@@ -32,9 +32,6 @@ button {
   transition: background 0.2s ease;
 }
 
-button:hover {
-  background: #555;
-}
 
 #result {
   font-weight: bold;
