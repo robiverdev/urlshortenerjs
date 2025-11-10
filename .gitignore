@@ -1,0 +1,34 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+logs/
+*.log
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+._*
+
+.Spotlight-V100
+.Trashes
+*.swp  # Vim swap files
+*.swo  # Vim swap files
+
+*.ghostty
+*.termstate
+
+.env
+.env.local
+.env.*.local
+
+.npm
+
+tmp/
+temp/
+
+.vscode/
+.idea/
+*.sw?
