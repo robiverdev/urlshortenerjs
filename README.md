@@ -49,5 +49,5 @@ Redirects to the original URL.
 ## Other implementations
 
 - [Go](https://github.com/robiverdev/urlshortener)
-- [Rust](link) *(coming soon)*
+- [Rust](https://github.com/robiverdev/urlshortenerrust)
 - [C](link) *(coming soon)*
